@@ -1,0 +1,22 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#include <locale.h> // Отвечает за локализацию
+int main()
+{
+	setlocale(LC_ALL, "Rus"); // Все, русский работает
+	int a, b, A, B, S, C, P, R;
+	printf("Введите число a =");
+	scanf_s("%d", &a);
+	printf("Введите число b =");
+	scanf_s("%d", &b);
+	A = abs(a);
+	B = abs(b);
+	S = A + B;
+	R = A - B;
+	P = A * B;
+	C = A / B;
+
+	printf("Сумма модулей чисел a и b: %d\n Разность модулей чисел a и b: %d\n Произведение модулей чисел a и b: %d\n Частное модулей чисел a и b: %d\n", S, R, P, C);
+
+	return 0;
+}
