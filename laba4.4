@@ -1,3 +1,5 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
 #include <locale.h> // Отвечает за локализацию
 int main()
 {
@@ -13,7 +15,6 @@ int main()
 	C = a * a / b * b;
 
 	printf("Сумма квадратов чисел a и b: %.2Lf\n Разность квадратов чисел a и b: %.2Lf\n Произведение квадратов чисел a и b: %.2Lf\n Частное квадратов чисел a и b: %.2Lf\n", S, R, P, C);
-
 
 	return 0;
 }
