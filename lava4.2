@@ -1,12 +1,15 @@
-#include <stdio.h>
 #define _CRT_SECURE_NO_WARNINGS
-//#include <>
-int main() {
-	float d, L, p=3.14;
-	scanf_s("%f", &d);
+#include <stdio.h>
+#include <locale.h> // Отвечает за локализацию
+int main()
+{
+	setlocale(LC_ALL, "Rus"); // Все, русский работает
+	float d, L, p = 3.14;
+	printf("Введите занчение диаметра окружности d\n");
+    scanf_s("%f", &d);
 	L = p * d;
-	 
-	printf("L=%.2Lf\n", L);
+
+	printf("Длина окружности равна %.2Lf\n", L);
 
 	return 0;
 }
