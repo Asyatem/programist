@@ -1,13 +1,16 @@
-#include <stdio.h>
 #define _CRT_SECURE_NO_WARNINGS
-//#include <>
-int main() {
-	int a, b, S, P;
-	scanf_s("%d", &a);
-	scanf_s("%d", &b);
-	S = a * b;
-	P = (a + b)*2;
-	printf("S=%d\n P=%d\n", S, P);
-
+#include <stdio.h>
+#include <locale.h> // Отвечает за локализацию
+int main()
+{
+	setlocale(LC_ALL, "Rus"); // Все, русский работает
+	int a,b,S,P; 
+		printf("Введите значение стороны прямоугольника a\n");
+		scanf("%d", &a);
+	    printf("Введите значение стороны прямоугольника b\n ");
+	    scanf("%d", &b); 
+		S = a * b;
+		P = (a + b) * 2;
+	printf("Площадь прямоугольника равна: %d\n Периметр прямоугольника равен: %d", S, P);
 	return 0;
 }
