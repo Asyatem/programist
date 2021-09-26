@@ -1,13 +1,18 @@
-#include <stdio.h>
 #define _CRT_SECURE_NO_WARNINGS
-//#include <>
-int main() {
-	float a,b, Sr;
+#include <stdio.h>
+#include <locale.h> // Отвечает за локализацию
+int main()
+{
+	setlocale(LC_ALL, "Rus"); // Все, русский работает
+	float a, b, Sr;
+	printf("Введите занчение переменной a\n");
 	scanf_s("%f", &a);
+	printf("Введите занчение переменной b\n");
 	scanf_s("%f", &b);
-	Sr=(a+b)/2;
-	 
-	printf("Sr=%.2Lf\n", Sr);
+	Sr = (a + b) / 2;
+
+	printf("Среднее занение a и b: %.2Lf\n", Sr);
+	
 
 	return 0;
 }
