@@ -1,21 +1,19 @@
-#include <stdio.h>
-#define _CRT_SECURE_NO_WARNINGS
-#include <locale.h> 
-//#include <>
-
-int main() {
-	setlocale(LC_ALL, "Rus");
-	float a,b, S, C, P, R;
+#include <locale.h> // Отвечает за локализацию
+int main()
+{
+	setlocale(LC_ALL, "Rus"); // Все, русский работает
+	float a, b, S, C, P, R;
 	printf("Введите число a =");
 	scanf_s("%f", &a);
 	printf("Введите число b =");
 	scanf_s("%f", &b);
-	S=a*a+b*b;
+	S = a * a + b * b;
 	R = a * a - b * b;
 	P = a * a * b * b;
-	C = a * a /b * b;
-	 
-	printf("Сумма квадратов чисел a и b =%.2Lf\n Разность квадратов чисел a и b=%.2Lf\n Произведение квадратов чисел a и b =%.2Lf\n Частное квадратов чисел a и b =%.2Lf\n", S,R,P,C);
+	C = a * a / b * b;
+
+	printf("Сумма квадратов чисел a и b: %.2Lf\n Разность квадратов чисел a и b: %.2Lf\n Произведение квадратов чисел a и b: %.2Lf\n Частное квадратов чисел a и b: %.2Lf\n", S, R, P, C);
+
 
 	return 0;
 }
