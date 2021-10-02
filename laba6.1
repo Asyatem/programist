@@ -1,0 +1,19 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#include <locale.h> // Отвечает за локализацию
+int main()
+{
+	setlocale(LC_ALL, "Rus"); // Все, русский работает
+	float a, b, c;
+	printf("Введите занчение переменной a\n");
+	scanf_s("%f", &a);
+	printf("Введите занчение переменной b\n");
+	scanf_s("%f", &b);
+	c = a ; 
+	a = b;
+	b = c;
+	printf("Значение переменной a: %f\nЗначение переменной b: %f", a, b);
+
+
+	return 0;
+}
