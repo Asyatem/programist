@@ -1,0 +1,24 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#include <locale.h> // Отвечает за локализацию
+#include <math.h>
+int main()
+{
+	setlocale(LC_ALL, "Rus"); // Все, русский работает
+	int A, B, C, AC, BC, Pr;
+	printf("Введите число A: ");
+	scanf("%d", &A);
+	printf("Введите число B: ");
+	scanf("%d", &B);
+	printf("Введите число C: ");
+	scanf("%d", &C);
+	if (A>C&&B<C||A<C&&B>C) {
+    AC= abs(A-C);
+    BC= abs(B-C);
+    Pr= AC*BC;
+    printf("Произведение отрезков AC и BC равно: %d\n", Pr);
+	} else {
+	    printf("точка C находиться не между точками A и B");
+}
+	return 0;
+}
