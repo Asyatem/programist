@@ -1,0 +1,21 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#include <locale.h> // Отвечает за локализацию
+#include <math.h>
+int main()
+{
+	setlocale(LC_ALL, "Rus"); // Все, русский работает
+	int A, B, C, AC, BC, Sum;
+	printf("Введите число A: ");
+	scanf("%d", &A);
+	printf("Введите число B: ");
+	scanf("%d", &B);
+	printf("Введите число C: ");
+	scanf("%d", &C);
+    AC= abs(A-C);
+    BC= abs(B-C);
+    Sum= AC+BC;
+	printf("Отрезок AC равен: %d\nОтрезок BC равен: %d\nСумма отрезков AC и BC равна: %d\n", AC, BC, Sum);
+
+	return 0;
+}
