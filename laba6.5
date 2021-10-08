@@ -1,0 +1,16 @@
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#include <locale.h> // Отвечает за локализацию
+#include <math.h>
+int main()
+{
+	setlocale(LC_ALL, "Rus"); // Все, русский работает
+	float y, x;
+	printf("Введите значение переменной x: ");
+	scanf("%f", &x);
+	y=4*pow(x-3,6)-7*pow(x-3,3)+2;
+	  
+	printf("Значение функции y: %f\n", y);
+
+	return 0;
+}
