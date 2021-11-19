@@ -1,0 +1,91 @@
+ #include <stdio.h>
+#include<locale.h>
+#include<math.h>
+int main(){
+   int f;
+    printf("Выберите одну из 6 программ: ");
+    scanf("%d",&f);
+    switch(f) {
+        case 1:
+            printf("Выбрано 1 задание\n");
+            float r,a;
+            printf("Перевод значения угла a из градусов в радианы\nВведите значение угла a: ");
+                scanf("%f",&a);
+             if(a>0 && a<360){
+                 r=(a*3.14)/180;
+                 printf("Значение угла a в радианах: %.2f\n",r);
+                 break;
+             }
+        case 2:
+            printf("Выбрано 2 задание\n");
+   float g,b;
+   printf("Перевод значения угла a из радиан в градусы\nВведите значение угла a: ");
+       scanf("%f",&b);
+    if(b>0 && b<2*3.14){
+        g=(b*180)/3.14;
+        printf("Значение угла a в градусах: %.2f\n",g);
+        break;
+    }
+        case 3:
+            printf("Выбрано 3 задание\n");
+              float x, y, A, x1, xy;
+                printf("Исходные данные\nX киллограмм конфет: ");
+                    scanf("%f",&x);
+                printf("Стоимость X килограмма конфет: ");
+                    scanf("%f",&A);
+                printf("Y килограмм конфет: ");
+                    scanf("%f",&y);
+                x1=A/x;
+                xy=y*x1;
+                printf("Один килограмм конфет стоит: %.2f\n",x1);
+                printf("Y килограмм конфет стоит: %.2f\n",xy);
+            break;
+        case 4:
+            printf("Выбрано 4 задание\n");
+            float v1, v2, t, s, sk;
+                printf("Исходные данные\nСкорость первого автомобиля: ");
+                    scanf("%f",&v1);
+                printf("Скорость второго автомобиля: ");
+                    scanf("%f",&v2);
+                printf("Расстояние между автомобилями: ");
+                    scanf("%f",&s);
+                printf("Сколько времени прошло: ");
+                    scanf("%f",&t);
+                sk=s+t*fabs(v1-v2);
+                printf("расстояниеи между автомобилями спустя время: %.2f\n",sk);
+            break;
+        case 5:
+            printf("Выбрано 5 задание\n");
+            float c, d, x3;
+               printf("Решение уравнения A*x+B=0\nЗначение A: ");
+                   scanf("%f",&c);
+               printf("Значение B: ");
+                   scanf("%f",&d);
+               x=-d/c;
+               printf("Значение x: %.2f\n",x);
+            break;
+        case 6:
+            printf("Выбрано 6 задание\n");
+            float A1, A2, B2, B1, C1, C2, x4, y4;
+                printf("Решение системы уравнений A1*x+B1*y=C1 и A2*x+B2*y=C2 \nЗначение A1: ");
+                    scanf("%f",&A1);
+                printf("Значение B1: ");
+                scanf("%f",&B1);
+                printf("Значение C1: ");
+                scanf("%f",&C1);
+                printf("Значение A2: ");
+                scanf("%f",&A2);
+                printf("Значение B2: ");
+                scanf("%f",&B2);
+                printf("Значение C2: ");
+                scanf("%f",&C2);
+                y4=(C2-C1*A2/A1)/(B2-A2*B1/A1);
+                x4=(C1-B1*y4)/A1;
+                printf("Значение x: %.2f\n",x4);
+                printf("Значение y: %.2f\n",y4);
+            break;
+    }
+    return 0;
+}
+                 
+    
