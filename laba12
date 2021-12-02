@@ -1,0 +1,452 @@
+#include <stdio.h>
+#include<locale.h>
+#include<math.h>
+#include<stdlib.h>
+int main(){
+   int f;
+    printf("Выберите одну из 6 программ: ");
+    scanf("%d",&f);
+    switch(f) {
+        case 1:
+            printf("Выбрано 1 задание.Дан номер дня – целое число от 1 до 31 и месяца — целое число в диапазоне 1–12.Вывести дату в виде текста \n");
+            int d,m;
+            printf("Введите номер дня: ");
+            scanf("%d", &d);
+            printf("Введите номер месяца: ");
+            scanf("%d", &m);
+            switch(m){
+                case 1:
+                    printf("Дата: %d января\n", d);
+                    break;
+                case 2:
+                    printf("Дата: %d февраля\n", d);
+                    break;
+                case 3:
+                    printf("Дата: %d марта\n", d);
+                    break;
+                case 4:
+                    printf("Дата: %d апреля\n", d);
+                    break;
+                case 5:
+                    printf("Дата: %d мая\n", d);
+                    break;
+                case 6:
+                    printf("Дата: %d июня\n", d);
+                    break;
+                case 7:
+                    printf("Дата: %d июля\n", d);
+                    break;
+                case 8:
+                    printf("Дата: %d августа\n", d);
+                    break;
+                case 9:
+                    printf("Дата: %d сентября\n", d);
+                    break;
+                case 10:
+                    printf("Дата: %d октября\n", d);
+                    break;
+                case 11:
+                    printf("Дата: %d ноября\n", d);
+                    break;
+                case 12:
+                    printf("Дата: %d декабря\n", d);
+                    break;
+            }
+            break;
+        case 2:
+            printf("Выбрано 2 задание.Робот может перемещаться в четырех направлениях («С» — север, «З» — запад, «Ю» — юг, «В» — восток) и принимать три цифровые команды: 0 — продолжать движение, 1 — поворот налево, −1 — поворот направо. Дан символ C — исходное направление робота и целое число N — посланная ему команда. Вывести направление робота после выполнения полученной команды.\n");
+            int n; char l, c1='N', c2='W', c3='E';
+            printf("Введите направление робота: ");
+            scanf("%s", &l);
+            printf("Введите число команды: ");
+            scanf("%d", &n);
+            if (l==c1){
+                switch(n){
+                    case 0:
+                        printf("Направление: Севевр\n");
+                        break;
+                    case 1:
+                          printf("Направление: Запад\n");
+                        break;
+                    case -1:
+                        printf("Направление: Восток\n");
+                        break;
+                }
+            }else{
+                    if (l==c2){
+                        switch(n){
+                            case 0:
+                                printf("Направление: Запад\n");
+                                break;
+                            case 1:
+                                printf("Направление: Юг\n");
+                                break;
+                            case -1:
+                                printf("Направление: Север\n");
+                                break;
+                        }
+                    }else{
+                            if (l==c3){
+                                switch(n){
+                                    case 0:
+                                        printf("Направление: Юг\n");
+                                        break;
+                                    case 1:
+                                        printf("Направление: Восток\n");
+                                        break;
+                                    case -1:
+                                        printf("Направление: Запад\n");
+                                        break;
+                                }
+                                } else{
+                                    switch(n){
+                                        case 0:
+                                            printf("Направление: Восток\n");
+                                            break;
+                                        case 1:
+                                            printf("Направление: Север\n");
+                                            break;
+                                        case -1:
+                                            printf("Направление:Юг\n");
+                                            break;
+                                    }
+                                }
+                }
+            }
+            break;
+        case 3:
+            printf("Выбрано 3 задание.Дано целое число в диапазоне 10–40, определяющее количество учебных заданий по некоторой теме. Вывести строку-описание указанного количества заданий, обеспечив правильное согласование числа со словами «учебное задание.\n");
+            int k;
+            printf("Введите целое число в диапазоне 10-40: ");
+            scanf("%d", &k);
+            if (k/10==1){
+                    switch (k/10) {
+                    case 10:
+                            printf("Десять учебных заданий\n");
+                            break;
+                        case 11:
+                            printf("Одинадцать учебных заданий\n");
+                            break;
+                    case 12:
+                            printf("Двенадцать учебных заданий\n");
+                            break;
+                    case 13:
+                            printf("Тринадцать учебных заданий\n");
+                            break;
+                    case 14:
+                            printf("Четырнадцать учебных заданий\n");
+                            break;
+                    case 15:
+                            printf("Пятнадцать учебных заданий\n");
+                            break;
+                    case 16:
+                            printf("Шестнадцать учебных заданий\n");
+                            break;
+                    case 17:
+                            printf("Семнадцать учебных заданий\n");
+                            break;
+                    case 18:
+                            printf("Восемнадцать учебных заданий\n");
+                            break;
+                    case 19:
+                            printf("Девятнадцать учебных заданий\n");
+                            break;
+                    }
+                    }
+                else {
+                    switch (k/10) {
+                        case 2:
+                            printf("Двадцать ");
+                            break;
+                        case 3:
+                            printf("Тридцать ");
+                            break;
+                        case 4:
+                            printf("Сорок ");
+                            break;
+                        case 5:
+                            printf("Пятьдесят ");
+                            break;
+                        case 6:
+                            printf("Шестьдесят ");
+                            break;
+                        case 7:
+                            printf("Семьдесят ");
+                            break;
+                        case 8:
+                            printf("Восемьдесят ");
+                            break;
+                        case 9:
+                            printf("Девяносто ");
+                            break;
+                    }
+                }
+                    switch (k%10) {
+                    case 1:
+                        printf("одно учебное задание\n");
+                        break;
+                    case 2:
+                        printf("два учебных заданий\n");
+                        break;
+                    case 3:
+                        printf("три учебных заданий\n");
+                        break;
+                    case 4:
+                        printf("четыре учебных заданий\n");
+                        break;
+                    case 5:
+                        printf("пять учебных заданий\n");
+                        break;
+                    case 6:
+                        printf("шесть учебных заданий\n");
+                        break;
+                    case 7:
+                        printf("семь учебных заданий\n");
+                        break;
+                    case 8:
+                        printf("восемь учебных заданий\n");
+                        break;
+                    case 9:
+                        printf("девять учебных заданий\n");
+                        break;
+                    }
+            break;
+        case 4:
+            printf("Выбрано 4 задание.Дано целое число в диапазоне 100–999. Вывести строку-описание данного числа\n");
+            int k1;
+            printf("Введите целое число в диапазоне 100-999: ");
+            scanf("%d", &k1);
+            switch (k1/100) {
+               case 1:
+                   printf("Cто ");
+                   break;
+               case 2:
+                   printf("Двести ");
+                   break;
+               case 3:
+                   printf("Триста ");
+                   break;
+               case 4:
+                   printf("Четыреста ");
+                   break;
+               case 5:
+                   printf("Пятьсот ");
+                   break;
+               case 6:
+                   printf("Шестьсот ");
+                   break;
+               case 7:
+                   printf("Семьсот ");
+                   break;
+               case 8:
+                   printf("Восемьсот  ");
+                   break;
+               case 9:
+                   printf("Девятьсот  ");
+                   break;
+               }
+            if ((k1%100)/10==1){
+                    switch (k1%100) {
+                    case 10:
+                            printf("десять\n");
+                            break;
+                        case 11:
+                            printf("одинадцать\n");
+                            break;
+                    case 12:
+                            printf("двенадцать\n");
+                            break;
+                    case 13:
+                            printf("тринадцать\n");
+                            break;
+                    case 14:
+                            printf("четырнадцать\n");
+                            break;
+                    case 15:
+                            printf("пятнадцать\n");
+                            break;
+                    case 16:
+                            printf("шестнадцать\n");
+                            break;
+                    case 17:
+                            printf("семнадцать\n");
+                            break;
+                    case 18:
+                            printf("восемнадцать\n");
+                            break;
+                    case 19:
+                            printf("девятнадцать\n");
+                            break;
+                    }
+                    }
+                else {
+                    switch ((k1%100)/10) {
+                        case 2:
+                            printf("двадцать ");
+                            break;
+                        case 3:
+                            printf("тридцать ");
+                            break;
+                        case 4:
+                            printf("сорок ");
+                            break;
+                        case 5:
+                            printf("пятьдесят ");
+                            break;
+                        case 6:
+                            printf("шестьдесят ");
+                            break;
+                        case 7:
+                            printf("семьдесят ");
+                            break;
+                        case 8:
+                            printf("восемьдесят ");
+                            break;
+                        case 9:
+                            printf("девяносто ");
+                            break;
+                    }
+                }
+                    switch (k1%10) {
+                    case 1:
+                        printf("один\n");
+                        break;
+                    case 2:
+                        printf("два\n");
+                        break;
+                    case 3:
+                        printf("три\n");
+                        break;
+                    case 4:
+                        printf("четыре\n");
+                        break;
+                    case 5:
+                        printf("пять\n");
+                        break;
+                    case 6:
+                        printf("шесть\n");
+                        break;
+                    case 7:
+                        printf("семь\n");
+                        break;
+                    case 8:
+                        printf("восемь\n");
+                        break;
+                    case 9:
+                        printf("девять\n");
+                        break;
+                    }
+            break;
+        case 5:
+            printf("Выбрано 5 задание.В восточном календаре принят 60-летний цикл, состоящий из 12- летних подциклов, обозначаемых названиями цвета: зеленый, красный, желтый, белый и черный. В каждом подцикле годы носят названия животных: крысы, коровы, тигра, зайца, дракона, змеи, лошади, овцы, обезьяны, курицы, собаки и свиньи. По номеру года определить его название.\n");
+            int a6;
+            printf("Введите год: ");
+            scanf("%d",&a6);
+            a6=a6-1984;
+            if(a6%12==2||a6%12==3||a6%12==4){
+                switch ((a6/60)%5) {
+                    case 0:
+                        printf("Год зелёного ");
+                        break;
+                    case 1:
+                        printf("Год красного ");
+                        break;
+                    case 2:
+                        printf("Год жёлтого ");
+                        break;
+                    case 3:
+                        printf("Год белого ");
+                        break;
+                    case 4:
+                        printf("Год чёрного ");
+                        break;
+                }
+            }else{
+                switch ((a6/60)%5) {
+                    case 0:
+                        printf("Год зелёной ");
+                        break;
+                    case 1:
+                        printf("Год красной ");
+                        break;
+                    case 2:
+                        printf("Год жёлтой ");
+                        break;
+                    case 3:
+                        printf("Год белогой ");
+                        break;
+                    case 4:
+                        printf("Год чёрной ");
+                        break;
+                }
+            }
+            switch ((a6)%12) {
+                case 0:
+                   printf("крысы\n");
+                   break;
+               case 1:
+                   printf("коровы\n");
+                   break;
+               case 2:
+                   printf("тигра\n");
+                   break;
+               case 3:
+                   printf("зайца\n");
+                   break;
+               case 4:
+                   printf("дракона\n");
+                   break;
+               case 5:
+                   printf("змеи\n");
+                   break;
+               case 6:
+                   printf("лошади\n");
+                   break;
+               case 7:
+                   printf("овцы\n");
+                   break;
+               case 8:
+                   printf("обезьяны\n");
+                   break;
+               case 9:
+                   printf("курицы\n");
+                   break;
+               case 10:
+                   printf("собаки\n");
+                   break;
+               case 11:
+                   printf("свиньи\n");
+                   break;
+               }
+            break;
+        case 6:
+            printf("Выбрано 6 задание\n");
+            int a7;
+            printf("Введите число: ");
+            scanf("%d",&a7);
+            if (a7>0 && a7<1000){
+                if(a7/100>0) {
+                    if(a7%2==0)
+                        printf("Описание числа: трёхзначное, чётное\n");
+                    else
+                        printf("Описание числа: трёхзначное, нечётное\n");
+                } else {
+                    if (a7/10>0) {
+                        if(a7%2==0)
+                            printf("Описание числа:  двухзначное, чётное\n");
+                        else
+                            printf("Описание числа: двухзначное, нечётное\n");
+                    } else {
+                        if(a7%2==0)
+                            printf("Описание числа:  однозначное, чётное\n");
+                        else
+                            printf("Описание числа: однозначное, нечётное\n");
+                    }
+                    
+                }
+            }else
+                printf("Число не находиться в заданном промежутке\n");
+            break;
+    }
+    return 0;
+}
